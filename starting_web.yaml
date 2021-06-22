@@ -4,6 +4,10 @@
   gather_facts: false
   become: true
   tasks:
+  - name: Ansible copy file to remote server
+    copy:
+      src: /
+      dest: /var/www/html/
   - name: ensure httpd is running
     service:
       name: httpd 
